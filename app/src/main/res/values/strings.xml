@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Prueba Axity</string>
     <string name="walmart_url">https://super.walmart.com.mx/api/rest/model/atg/commerce/catalog/ProductCatalogActor/getSkuSummaryDetails?storeId=0000009999&amp;upc=00750129560012&amp;skuId=00750129560012</string>
+    <string name="defaultx">Default</string>
+    <string name="skuDisplayNameText">skuDisplayNameText</string>
+    <string name="department">department</string>
+    <string name="skuId">skuId</string>
+    <string name="basePrice">basePrice</string>
 </resources>

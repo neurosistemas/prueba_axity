@@ -1,13 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradiente_verde_medio"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
-    tools:showIn="@layout/act_main_content">
+    >
 
+    <android.support.v7.widget.CardView
+        android:id="@+id/main_card_skuDisplayNameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margen"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/colorAzulFuerte"
+        android:elevation="@dimen/card_elevacion"
+        android:padding="@dimen/card_margen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        card_view:cardCornerRadius="@dimen/card_radio">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main_titulo_skuDisplayNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/titulo_margen"
+                android:text="@string/skuDisplayNameText"
+                android:textColor="@color/colorAzulFuerte"
+                android:textSize="@dimen/titulo" />
+
+            <TextView
+                android:id="@+id/main_contenido_skuDisplayNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/contenido_margen"
+                android:text="@string/defaultx"
+                android:textSize="@dimen/contenedor" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/main_card_department"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margen"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorAzulFuerte"
+        android:elevation="@dimen/card_elevacion"
+        android:padding="@dimen/card_margen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_card_skuDisplayNameText"
+        card_view:cardCornerRadius="@dimen/card_radio">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main_titulo_department"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/titulo_margen"
+                android:text="@string/department"
+                android:textColor="@color/colorAzulFuerte"
+                android:textSize="@dimen/titulo" />
+
+            <TextView
+                android:id="@+id/main_contenido_department"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/contenido_margen"
+                android:text="@string/defaultx"
+                android:textSize="@dimen/contenedor" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/main_card_skuId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margen"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorAzulFuerte"
+        android:elevation="@dimen/card_elevacion"
+        android:padding="@dimen/card_margen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_card_department"
+        card_view:cardCornerRadius="@dimen/card_radio">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main_titulo_skuId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/titulo_margen"
+                android:text="@string/skuId"
+                android:textColor="@color/colorAzulFuerte"
+                android:textSize="@dimen/titulo" />
+
+            <TextView
+                android:id="@+id/main_contenido_skuId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/contenido_margen"
+                android:text="@string/defaultx"
+                android:textSize="@dimen/contenedor" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/main_card_basePrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margen"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorAzulFuerte"
+        android:elevation="@dimen/card_elevacion"
+        android:padding="@dimen/card_margen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_card_skuId"
+        card_view:cardCornerRadius="@dimen/card_radio">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main_titulo_basePrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/titulo_margen"
+                android:text="@string/basePrice"
+                android:textColor="@color/colorAzulFuerte"
+                android:textSize="@dimen/titulo" />
+
+            <TextView
+                android:id="@+id/main_contenido_basePrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/contenido_margen"
+                android:text="@string/defaultx"
+                android:textSize="@dimen/contenedor" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        card_view:layout_constraintGuide_begin="205dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        card_view:layout_constraintGuide_begin="100dp" />
 
 </android.support.constraint.ConstraintLayout>

@@ -4,5 +4,8 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorAzulado">#589BA9</color>
+    <color name="fondo_verde_base_debil">#b3ffff</color>
+    <color name="fondo_verde_base_fuerte">#006668</color>
+    <color name="colorAzulFuerte">#0085FF</color>
 
 </resources>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -24,10 +25,20 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String DATOS = "datosPrueba";
     private DatosPrueba datos;
+    private TextView tvSkuDisplayContenido;
+    private TextView tvDepartmentContenido;
+    private TextView tvSkuIdContenido;
+    private TextView tvBasePriceContenido;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        tvSkuDisplayContenido = findViewById(R.id.main_contenido_skuDisplayNameText);
+        tvDepartmentContenido = findViewById(R.id.main_contenido_department);
+        tvSkuIdContenido = findViewById(R.id.main_contenido_skuId);
+        tvBasePriceContenido = findViewById(R.id.main_contenido_basePrice);
 
         Toolbar toolbar = findViewById(R.id.toolbar1);
         setSupportActionBar(toolbar);
@@ -53,7 +64,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setDatos() {
-
+        tvSkuDisplayContenido.setText(datos.getSkuDisplayNameText());
+        tvDepartmentContenido.setText(datos.getDepartment());
+        tvSkuIdContenido.setText(datos.getSkuId());
+        tvBasePriceContenido.setText(datos.getBasePrice());
     }
 
     private void descargarInfoWalmart(){
