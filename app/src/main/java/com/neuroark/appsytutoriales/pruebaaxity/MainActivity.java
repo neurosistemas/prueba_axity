@@ -1,6 +1,5 @@
 package com.neuroark.appsytutoriales.pruebaaxity;
 
-import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +13,7 @@ import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.StringRequest;
 import com.neuroark.appsytutoriales.pruebaaxity.Herramientas.ManejadorJSON;
 import com.neuroark.appsytutoriales.pruebaaxity.Internet.ConectorVolley;
+import com.neuroark.appsytutoriales.pruebaaxity.Modelos.DatosPrueba;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -22,6 +22,8 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String DATOS = "datosPrueba";
+    private DatosPrueba datos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +39,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        if(savedInstanceState!=null){
+            datos= savedInstanceState.getParcelable(DATOS);
+            setDatos();
+        }
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelable(DATOS,datos);
+    }
+
+    private void setDatos() {
 
     }
 
@@ -64,7 +79,8 @@ public class MainActivity extends AppCompatActivity {
                         String department = object.getString("department");
                         String skuId = object.getString("skuId");
                         String basePrice = object.getString("basePrice");
-
+                        datos = new DatosPrueba(skuDisplayNameText,department,skuId,basePrice);
+                        setDatos();
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
